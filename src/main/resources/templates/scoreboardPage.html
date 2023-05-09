@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>ScoreBoard</title>
+</head>
+<header>
+    <h2>Здравствуйте, <span th:text="${#httpServletRequest.remoteUser}"></span></h2>
+    <a sec:authorize="hasAuthority('ADMIN')" href="/scoreboard/admin">Панель администратора</a>
+    <a href="/logout">Выйти из учетной записи</a>
+</header>
+<body>
+<h1>Ваш рейтинг по решению задач:</h1>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Категория задач:</th>
+            <th>Вы решили:</th>
+            <th>Ваш рейтинг:</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <tr th:each="category : ${scoreResult}">
+            <td th:text="${category.getCategoryName()}"></td>
+            <td>
+                <a th:text="${category.getCompletedTasks()}"></a>
+                <a> из </a>
+                <a th:text="${category.getCountOfTasks()}"></a>
+            </td>
+            <td th:text="${category.getPlaceInTop()}"></td>
+        </tr>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
