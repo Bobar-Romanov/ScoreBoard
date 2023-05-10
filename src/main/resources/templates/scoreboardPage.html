@@ -29,7 +29,11 @@
                 <a> из </a>
                 <a th:text="${category.getCountOfTasks()}"></a>
             </td>
-            <td th:text="${category.getPlaceInTop()}"></td>
+            <td>
+            <a th:text="${category.getPlaceInTop()}"></a>
+            <a> из </a>
+            <a th:text="${category.getCountOfUsers()}"></a>
+            </td>
         </tr>
         </tr>
         </tbody>

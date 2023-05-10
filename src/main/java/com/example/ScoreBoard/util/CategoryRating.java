@@ -8,14 +8,25 @@ public class CategoryRating {
     private Long countOfTasks;
     private Long completedTasks;
     private Long placeInTop;
+    private Long countOfUsers;
     private User user;
 
-    public CategoryRating(String categoryName, Long countOfTasks, Long completedTasks, Long placeInTop, User user) {
+
+    public CategoryRating(String categoryName, Long countOfTasks, Long completedTasks, Long placeInTop, Long countOfUsers, User user) {
         this.categoryName = categoryName;
         this.countOfTasks = countOfTasks;
         this.completedTasks = completedTasks;
         this.placeInTop = placeInTop;
+        this.countOfUsers = countOfUsers;
         this.user = user;
+    }
+
+    public Long getCountOfUsers() {
+        return countOfUsers;
+    }
+
+    public void setCountOfUsers(Long countOfUsers) {
+        countOfUsers = countOfUsers;
     }
 
     public CategoryRating() {
