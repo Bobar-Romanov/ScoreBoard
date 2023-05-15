@@ -15,4 +15,4 @@
 Сервисный слой возвращает массив объектов, каждый объект представляет собой название категории и результаты по решению задач в данной категории для конкретного пользователя.  
 
 Схема базы данных  
-<img src="https://disk.yandex.ru/i/4CxKLldyHV9J8A" alt="BD_Schema">
+<img src="https://github.com/Bobar-Romanov/ScoreBoard/blob/master/1w9u7ehhwvE.jpg" alt="BD_Schema">
